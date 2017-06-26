@@ -10,6 +10,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.TreeMap;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -18,12 +19,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kris.weather.model.WeatherModel;
 import com.kris.weather.model.geography.Geography;
 import com.kris.weather.model.geography.Weatherforecast;
+import com.kris.weather.model.oceanography.Oceanography;
 
 public class WeatherUtil {
-
-
-
-	public static String geographicRules = "./resource/geography.json";
 
 	public static String toISO8601UTC(ZonedDateTime date) throws Exception {
 
@@ -36,9 +34,9 @@ public class WeatherUtil {
 		ZonedDateTime date = null;
 
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-
+		ZoneId utcZoneID = ZoneId.of("Etc/UTC");
 		Date input = format.parse(dateStr);
-		date = input.toInstant().atZone(ZoneId.systemDefault());
+		date = input.toInstant().atZone(ZoneId.of("Etc/UTC"));
 
 		// DateTimeFormatter timeFormatter =
 		// DateTimeFormatter.ofPattern("yyyy-mm-dd'T' hh:mm:ssz");
@@ -98,10 +96,19 @@ public class WeatherUtil {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 
-		File file = getResourceFile(geographicRules);
+		File file = getResourceFile(WeatherConstants.geographicRules);
 		Geography geo = mapper.readValue(file, Geography.class);
-		Weatherforecast datasets = geo.getWeatherforecast().get(0);
 		return geo;
+	}
+
+	public static Oceanography getOceanographyJSON()
+			throws JsonParseException, JsonMappingException, MalformedURLException, IOException {
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+
+		File file = getResourceFile(WeatherConstants.oceanographyRules);
+		Oceanography model = mapper.readValue(file, Oceanography.class);
+		return model;
 	}
 
 	public static File readInputs(String strFile) throws Exception {
@@ -112,6 +119,5 @@ public class WeatherUtil {
 	private static File getResourceFile(String fileName) {
 		return Paths.get(fileName).toFile();
 	}
-
 
 }

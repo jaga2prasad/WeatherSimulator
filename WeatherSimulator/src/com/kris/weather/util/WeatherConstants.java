@@ -5,9 +5,13 @@ public class WeatherConstants {
 	public static enum RULES {
 		GEOGRAPHY, OCEANOGRAPHY, TOPOGRAPHY
 	};
+
 	public static String inputFile = "./input.txt";
 	public static String outputFile = "./output.txt";
 	public static String errorFile = "./error.txt";
+	public static String geographicRules = "./geography.json";
+	public static String oceanographyRules = "./oceanography.json";
+
 	public static final String NORTHERNHEMISPHERE = "northernhemisphere";
 	public static final String SOUTHERNHEMISPHERE = "southernhemisphere";
 

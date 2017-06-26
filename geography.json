@@ -1,0 +1,180 @@
+		{
+	"weatherforecast": 
+	[{
+		"hemisphere":
+		[
+		{
+			"name:" :"northernhemisphere",
+				"geoPoints":
+				[
+					{
+						"geoPoint":"northpole",
+						"degrees": 90,
+						"seasons": 
+							[{
+								"season": 
+								[
+									{"month": "may","temperature": 0},
+									{"month": "april","temperature": -1},
+									{"month": "march","temperature": -2},
+									{"month": "june","temperature": -1},
+									{"month": "july","temperature": -2},
+									{"month": "october","temperature": -6},
+									{"month": "november","temperature": -8},
+									{"month": "december","temperature": -10},
+									{"month": "january","temperature": -8},
+									{"month": "febraury","temperature": -6},
+									{"month": "August", "temperature": -5 } ,
+									{"month": "September", "temperature": -5}
+								]
+							}]
+					},
+					{
+						"geoPoint":"articcircle",
+						"degrees": 66.5,
+						"seasons": 
+							[{
+								"season": 
+								[
+									{"month": "may","temperature": 10},
+									{"month": "april","temperature": 9},
+									{"month": "march","temperature": 7},
+									{"month": "june","temperature": 9},
+									{"month": "july","temperature": 7},
+									{"month": "october","temperature": 2},
+									{"month": "november","temperature": 1},
+									{"month": "december","temperature": 0},
+									{"month": "january","temperature": 1},
+									{"month": "febraury","temperature": 2},
+									{"month": "August", "temperature": 5 } ,
+									{"month": "September", "temperature": 5}
+								]
+							}]
+					},
+					{
+						"geoPoint":"tropicofcancer",
+						"degrees": 23.5,
+						"seasons": 
+							[{
+								"season": 
+								[
+									{"month": "may","temperature": 40},
+									{"month": "april","temperature": 38},
+									{"month": "march","temperature": 36},
+									{"month": "june","temperature": 38},
+									{"month": "july","temperature": 36},
+									{"month": "october","temperature": 19},
+									{"month": "november","temperature": 17},
+									{"month": "december","temperature": 15},
+									{"month": "january","temperature": 17},
+									{"month": "febraury","temperature": 19},
+									{"month": "August", "temperature": 35} ,
+									{"month": "September", "temperature": 34}
+								]
+							}]
+					},
+					{
+						"geoPoint":"equator",
+						"degrees": 0,
+						"seasons": 
+							[{
+								"season": 
+								[
+									{"month": "may","temperature": 35},
+									{"month": "april","temperature": 34},
+									{"month": "march","temperature": 33},
+									{"month": "june","temperature": 34},
+									{"month": "july","temperature": 33},
+									{"month": "october","temperature": 27},
+									{"month": "november","temperature": 29},
+									{"month": "december","temperature": 30},
+									{"month": "january","temperature": 29},
+									{"month": "febraury","temperature": 27},
+									{"month": "August", "temperature": 30} ,
+									{"month": "September", "temperature": 29}
+								]
+							}]
+					}
+
+				]
+		}, 
+				{
+			"name:" :"southernhemisphere",
+				"geoPoints":
+				[
+					
+					{
+						"geoPoint":"tropicofcapricon",
+						"degrees": -23.5,
+						"seasons": 
+							[{
+								"season": 
+								[
+									{"month": "may","temperature": 19},
+									{"month": "april","temperature": 21},
+									{"month": "march","temperature": 25},
+									{"month": "june","temperature": -1},
+									{"month": "july","temperature": -2},
+									{"month": "october","temperature": 27},
+									{"month": "november","temperature": 28},
+									{"month": "december","temperature": 30},
+									{"month": "january","temperature": 28},
+									{"month": "febraury","temperature": 26},
+									{"month": "August", "temperature": 12 } ,
+									{"month": "September", "temperature": 14}
+								]
+							}]
+					}, 
+					
+					{
+						"geoPoint":"antarticcircle",
+						"degrees": -66.5,
+						"seasons": 
+							[{
+								"season": 
+								[
+									{"month": "may","temperature": -6},
+									{"month": "april","temperature": -4},
+									{"month": "march","temperature": -1},
+									{"month": "june","temperature": -8},
+									{"month": "july","temperature": -10},
+									{"month": "october","temperature": -4},
+									{"month": "november","temperature": -1},
+									{"month": "december","temperature": 0},
+									{"month": "january","temperature": -1},
+									{"month": "febraury","temperature": -2},
+									{"month": "August", "temperature": -5 } ,
+									{"month": "September", "temperature": -5}
+								]
+							}]
+					},
+					
+					{
+						"geoPoint":"southpole",
+						"degrees": -90,
+						"seasons": 
+							[{
+								"season": 
+								[
+									{"month": "may","temperature": -3},
+									{"month": "april","temperature": -30},
+									{"month": "march","temperature": -30},
+									{"month": "june","temperature": -30},
+									{"month": "july","temperature": -30},
+									{"month": "october","temperature": -10},
+									{"month": "november","temperature": -10},
+									{"month": "december","temperature": -10},
+									{"month": "january","temperature": -8},
+									{"month": "febraury","temperature": -7},
+									{"month": "August", "temperature": -15} ,
+									{"month": "September", "temperature": -15}
+								]
+							}]
+					}
+					
+
+				]
+		}
+		]
+	}] 
+}

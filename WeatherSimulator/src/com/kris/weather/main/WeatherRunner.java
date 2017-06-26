@@ -44,7 +44,7 @@ public class WeatherRunner {
 				sbfWeatherData.append(weatherModel.toString()).append("\n");
 
 			} catch (Exception e) {
-				errorInputs.append(s).append("\n");
+				errorInputs.append(e.getMessage()).append("\n").append(s).append("\n");
 				e.printStackTrace();
 			}
 		}
@@ -53,10 +53,11 @@ public class WeatherRunner {
 			Files.write(Paths.get(WeatherConstants.outputFile), sbfWeatherData.toString().getBytes());
 			Files.write(Paths.get(WeatherConstants.errorFile), errorInputs.toString().getBytes());
 		} catch (IOException e) {
+			System.out.println("Error in processing. Please check Error.txt");
 			e.printStackTrace();
 		}
-
-		System.out.println("Processed! Check the resource Directory");
+		
+		System.out.println("Processed!");
 
 	}
 

@@ -8,27 +8,25 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 //import org.apache.commons.lang.builder.ToStringBuilder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "weatherforecast"
-})
+@JsonPropertyOrder({ "weatherforecast" })
 public class Geography {
 
-    @JsonProperty("weatherforecast")
-    private List<Weatherforecast> weatherforecast = null;
+	@JsonProperty("weatherforecast")
+	private List<Weatherforecast> weatherforecast = null;
 
-    @JsonProperty("weatherforecast")
-    public List<Weatherforecast> getWeatherforecast() {
-        return weatherforecast;
-    }
+	@JsonProperty("weatherforecast")
+	public List<Weatherforecast> getWeatherforecast() {
+		return weatherforecast;
+	}
 
-    @JsonProperty("weatherforecast")
-    public void setWeatherforecast(List<Weatherforecast> weatherforecast) {
-        this.weatherforecast = weatherforecast;
-    }
+	@JsonProperty("weatherforecast")
+	public void setWeatherforecast(List<Weatherforecast> weatherforecast) {
+		this.weatherforecast = weatherforecast;
+	}
 
-/*    @Override
-    public String toString() {
-        return ToStringBuilder.reflectionToString(this);
-    }*/
+	/*
+	 * @Override public String toString() { return
+	 * ToStringBuilder.reflectionToString(this); }
+	 */
 
 }

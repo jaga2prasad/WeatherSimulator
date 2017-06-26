@@ -112,10 +112,11 @@ public class WeatherModel {
 
 		StringBuffer sbf = new StringBuffer();
 		String delimiter = "|";
+
 		sbf.append(this.city).append(delimiter).append(this.latitude).append(",").append(this.longitude).append(",")
-				.append(this.elevation * 0.3048).append(delimiter).append(this.time).append(delimiter).append("Sunny")
-				.append(delimiter).append(this.temperature).append(delimiter).append("1014").append(delimiter)
-				.append("50").append(delimiter);
+				.append(this.elevation).append(delimiter).append(this.time).append(delimiter).append(this.condition)
+				.append(delimiter).append(this.temperature).append(delimiter).append(this.pressure).append(delimiter)
+				.append(this.humidity);
 		return sbf.toString();
 	}
 }

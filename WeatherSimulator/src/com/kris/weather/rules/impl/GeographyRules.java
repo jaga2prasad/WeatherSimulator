@@ -1,9 +1,6 @@
 package com.kris.weather.rules.impl;
 
-import java.time.Month;
-import java.time.ZonedDateTime;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +41,8 @@ public class GeographyRules implements IWeatherRule {
 			}
 		}
 		// get Hemisphere
-		hemisphere = HemisphereMap.get(latitude >= 0 ? WeatherConstants.NORTHERNHEMISPHERE : WeatherConstants.SOUTHERNHEMISPHERE);
+		hemisphere = HemisphereMap
+				.get(latitude >= 0 ? WeatherConstants.NORTHERNHEMISPHERE : WeatherConstants.SOUTHERNHEMISPHERE);
 
 		// get Month
 		month = input.getTime().getMonth().name();
@@ -95,10 +93,6 @@ public class GeographyRules implements IWeatherRule {
 		input.setTemperature(temperature);
 
 		return input;
-	}
-
-	private String getMonth(Calendar cal) {
-		return Month.of(cal.get(Calendar.MONTH) + 1).name();
 	}
 
 	private GeoPoint closestDegree(GeoPoint g1, GeoPoint g2, double latitude) {
